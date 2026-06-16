@@ -34,26 +34,62 @@
     <main class="container content-wrapper">
         <section class="form-section">
             <h1 class="section-title">Form Peminjaman Buku</h1>
-            /Form/
+            <form action="#" method="POST" class="form-card">
+                <fieldset>
+                    <legend>Data Peminjam</legend>
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nim">NIM</label>
+                            <input type="text" id="nim" name="nim" placeholder="Contoh: 123456789" maxlength="10" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="email@example.com" required>
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Detail Peminjaman</legend>
+                    <div class="form-group">
+                        <label for "buku">Pilih Buku</label>
+                        <select id="buku" name="buku" required>
+                            <option value="">-- Pilih Judul Buku-</option>
+                            <option value="ptfi">Pengantar Teknik Industri</option>
+                            <option value="tlp">Tata Letak Pabrik</option>
+                            <option value="dpw">Dasar Pemrograman Web</option>
+                            <option value="bd">Basis Data Relasional</option>
+                            <option value="sp">Struktur Data dan Pemrograman</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="tglPinjam">Tanggal Peminjaman</label>
+                            <input type="date" id="tglPinjam" name="tglPinjam" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tglKembali">Tanggal Kembali</label>
+                            <input type="date" id="tglKembali" name="tglKembali" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="catatan">Catatan (opsional)</label>
+                        <textarea id="catatan" name="catatan" placeholder="Tuliskan catatan atau alasan peminjaman..."></textarea>
+                    </div>
+                </fieldset>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">✅ Kirim Permohonan</button>
+                    <button type="reset" class="btn btn-outline">↪️ Reset</button>
+                </div>
+            </form>
+        </section>
+    </main>
             
-
-
-
- 
- 
- 
-            
-
-
-
-
-
-
-
-
-
-
-
     <footer class="footer">
         <div class="container footer-inner">
             <div>
