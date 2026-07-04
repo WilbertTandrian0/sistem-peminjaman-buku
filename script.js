@@ -9,7 +9,7 @@ function saveData(data) {
 
 function formatTanggal (dateStr) {
     if (!dateStr) return '-';
-    const bulan = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'okt', 'Nov', 'Des'];
+    const bulan = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'];
     const d = new Date(dateStr);
     return d.getDate() + ' ' + bulan[d.getMonth()] + ' ' + d.getFullYear();
 }
@@ -19,7 +19,7 @@ function hitungHari (tglPinjam, tglKembali) {
     const end = new Date(tglKembali);
     const diffTime = Math.abs(end - start);
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    return diffDays + "hari";
+    return diffDays + " hari";
 }
 
 function initForm() {
@@ -57,14 +57,14 @@ function initForm() {
         const email = document.getElementById('email').value.trim();
         const buku = document.getElementById('buku').value;
         const tglPinjam = document.getElementById('tglPinjam').value; 
-        const tglkembali = document.getElementById('tglKembali').value;
+        const tglKembali = document.getElementById('tglKembali').value;
         const catatan = document.getElementById('catatan').value.trim();
 
         if (isNaN(nim)) {
             alert('❌ Error: NIM harus berupa angka!');
             return;
         }
-        if (tglkembali < tglPinjam) {
+        if (tglKembali < tglPinjam) {
             alert('❌ Error: Tanggal kembali tidak boleh lebih cepat dari tanggal pinjam!');
             return;
         }
@@ -78,8 +78,8 @@ function initForm() {
                     data[i].nim = nim;
                     data[i].email = email;
                     data[i].buku = buku;
-                    data[i].tglPinjam = tglpinjam;
-                    data[i].tglkembali = tglKembali;
+                    data[i].tglPinjam = tglPinjam;
+                    data[i].tglKembali = tglKembali;
                     data[i].catatan = catatan;
                     break;
                 }
@@ -91,8 +91,8 @@ function initForm() {
                 nim: nim,
                 email: email,
                 buku: buku,
-                tglpinjam: tglpinjam,
-                tglKembali: tglkembali,
+                tglPinjam: tglPinjam,
+                tglKembali: tglKembali,
                 catatan: catatan,
                 status: '⏳ Diproses'
             };
